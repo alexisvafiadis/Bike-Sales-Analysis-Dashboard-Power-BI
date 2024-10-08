@@ -41,6 +41,59 @@ The provided dataset includes structured data with a **fact table** (sales trans
 ---
 
 
+## Project Workflow
+
+This section outlines the key phases of the project development process, from handling the original dataset issues to creating a comprehensive Power BI dashboard.
+
+### 1) Baseline Data Crunching
+
+The initial phase of the project focused on cleaning and preparing the dataset, which had multiple issues:
+
+- **Mess of the Original Data**: The dataset contained inconsistencies, missing information, and errors.
+- **Limited Data for Each Dimension**: Many of the dimension tables were incomplete, lacking detailed information necessary for in-depth analysis.
+- **Sales-Focused Data**: The data primarily contained sales-related metrics, with limited information about customers, stores, and agents.
+- **Data Errors**: There were noticeable errors such as:
+  - **Shipping Date before Order Date**: In some entries, the shipping date was recorded before the order date, signaling data quality issues.
+
+### 2) Modeling the Data Warehouse
+
+The second phase involved creating a robust data model in Power BI by resolving data quality issues and adding new measures for analysis:
+
+- **Power BI Model**: A data warehouse model was built, integrating fact and dimension tables (refer to the Project Structure for a detailed view).
+- **New Time Dimension**: A new **Calendar** dimension table was added to enable **Time Intelligence** analysis.
+- **Geospatial Enhancements**: A new data source was incorporated:
+  - **Locations Table**: Added fields like population, longitude, and latitude to enable geographical analysis.
+- **Reduced Redundancy**:
+  - **Fact Table Simplification**: Moved unit price and unit cost from the sales fact table to the **Products** dimension table, reducing redundancy.
+- **Error Corrections**:
+  - **Date Errors**: Fixed records where the shipping or invoice date occurred before the order date by replacing the dates with:
+    - `Order Date + mode(Shipping or Invoice Duration)`
+- **Hierarchies**: Created hierarchical structures for easier drill-down analysis:
+  - **Locations**: Region → Province → Town
+  - **Calendar**: Year → Quarter → Month → Week → Day
+- **Calculated Columns**:
+  - **Sales Table**: Added shipping duration and invoice duration to track these metrics.
+  - **Locations Table**: Added **Region Segment** and **Place**.
+  - **Customers Table**: Added **Customer Segment** for better customer segmentation.
+- **Measures**: Created additional **DAX measures** and stored them in a separate table for calculating key metrics.
+
+### 3) Exploratory Data Analysis
+
+In this phase, exploratory data analysis (EDA) was performed to assess which visualizations and insights were feasible with the available data. This process helped identify the limitations of the dataset:
+
+- **Short-Term Data**: The dataset only covered one month of sales, limiting the ability to make long-term assessments of customer habits and sales evolution.
+- **Lack of Detailed Information**: There was insufficient data on customers, stores, and sales agents, which caused the analysis to be overly focused on sales-related metrics.
+- **Data Quality Concerns**:
+  - The **Shipping Date** followed a near-perfect normal distribution and was sometimes recorded before the order date, raising doubts about the reliability of these entries.
+  - The **Invoice Date** might also be artificial, affecting the accuracy of metrics such as the **Late Invoice Rate**.
+
+### 4) Making the Dashboard
+
+The final step involved creating an interactive Power BI dashboard, incorporating all the cleansed data and calculated measures. The dashboard contains 4 pages including the menu.
+
+---
+
+
 ## Project Structure
 
 The project is structured into key data sources and Power BI files:
@@ -53,6 +106,8 @@ The project is structured into key data sources and Power BI files:
 ### Data Model
 
 The data model for the San Martin Bike Store project is based on a **data warehouse structure** that integrates a **Fact Table** and several **Dimension Tables**. The fact table captures transactional data related to sales, while the dimension tables provide additional descriptive information that enriches the analysis.
+
+<img src="images/model.png" alt="Power BI Model" width="550px">
 
 #### Fact Table
 
@@ -213,11 +268,51 @@ The **Ameasure Table** is the core table for all calculated measures and KPIs us
 
 ## Dashboard Overview
 
+### Menu
+
+<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
+
+
+### Finance Dashboard
+
+<img src="images/finance.png" alt="Finance Dashboard" width="700"/>
+
+
+### Management Dashboard
+
+<img src="images/management.png" alt="Management Dashboard" width="700"/>
+
+
+### Marketing Dashboard
+
+<img src="images/marketing.png" alt="Marketing Dashboard" width="700"/>
 
 ---
 
 
-## Areas for improvement
+## Potential Data Extensions
 
+To extend the depth of the analysis, additional data could be incorporated into the current model. These new columns would allow for more complete reports:
 
+- **Customer Data**: Collecting more detailed customer data would enable better customer segmentation and targeted marketing strategies:
+  - Gender, age, address, profession, marital status.
 
+- **Sales Agents Data**: Adding information about the sales agents would allow for performance and HR-related analysis:
+  - Hiring date, salary, years of experience, and sales targets.
+
+- **Store Data**: More information about the stores could offer insights into operational efficiency and potential areas for improvement:
+  - Number of employees, store size, store type (franchise, company-owned), lease expiry, renovation date.
+
+- **Product Data**: Adding more product-related data would allow for a better understanding of supply chain dynamics and inventory management:
+  - Supplier information, stock levels, and restocking frequency.
+
+- **Geospatial Data**: Utilizing population data could provide insights into potential market penetration and customer demographics:
+  - Percentage of people who use bicycles in each region or town.
+
+- **Extended Time Period**: Analyzing data over a longer period would allow for a more accurate understanding of trends and seasonality:
+  - More data over several months or years.
+
+- **Global Business Data**: Adding high-level business data could enrich performance analysis, setting the business's actual performance against internal and external benchmarks:
+  - Sales targets, customer satisfaction metrics, industry benchmarks.
+
+---

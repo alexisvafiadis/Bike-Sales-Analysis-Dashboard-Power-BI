@@ -1,5 +1,4 @@
 # Bike Store Sales Analysis Dashboard
-<img src="https://fp20analytics.com/wp-content/uploads/2024/05/1.-January_San-Martins-Stores.webp" alt="Dataset Context Illustration" width="150px">
 
 ## Project Overview
 
@@ -9,7 +8,7 @@ This project demonstrates the use of **Business Intelligence (BI)** techniques t
 
 
 # Project Context
-
+<img src="https://fp20analytics.com/wp-content/uploads/2024/05/1.-January_San-Martins-Stores.webp" alt="Dataset Context Illustration" width="150px">
 The dataset for this project comes from an outdated challenge sponsored by **FP20 Analytics**. It represents one month of sales through San Martin Stores, which operate in various locations across Spain. The challenge focused on analyzing short-term sales trends without the benefit of long-term data, making the analysis more challenging and focused on immediate insights.
 
 ### Dataset Source

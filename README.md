@@ -1,4 +1,5 @@
-# Bike Store Sales Analysis Dashboard with Power BI
+# Bike Store Sales Analysis Dashboard
+<img src="https://fp20analytics.com/wp-content/uploads/2024/05/1.-January_San-Martins-Stores.webp" alt="Dataset Context Illustration" width="150px">
 
 ## Project Overview
 

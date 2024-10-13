@@ -92,6 +92,38 @@ The final step involved creating an interactive Power BI dashboard, incorporatin
 
 ---
 
+## Technologies Used
+
+- **Power BI**: Used to load, model, and visualize the data, providing interactive dashboards.
+- **Data Warehouse**: A centralized model to integrate fact and dimension tables for the analysis.
+- **DAX (Data Analysis Expressions)**: Used within BI to add calculated columns like segments, aggregations of columns and Shipping / Invoice durations, but also measures.
+
+---
+
+
+## Dashboard Overview
+
+### Menu
+
+<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
+
+
+### Finance Dashboard
+
+<img src="images/finance.png" alt="Finance Dashboard" width="700"/>
+
+
+### Management Dashboard
+
+<img src="images/management.png" alt="Management Dashboard" width="700"/>
+
+
+### Marketing Dashboard
+
+<img src="images/marketing.png" alt="Marketing Dashboard" width="700"/>
+
+---
+
 
 ## Project Structure
 
@@ -252,39 +284,6 @@ The **Ameasure Table** is the core table for all calculated measures and KPIs us
    - **Count Non-Unique Costs**: Identifies instances where products have varying costs within the same period (must be 0 before moving Unit Price column from Sales to Product table).
    - **Number of Shipping Before Order**: The number of occurrences where shipping happened before the order was placed (this was surprinsingly non-zero before we arbitrarily fixed the shipping date of those instances).
    - **Number of Invoice Before Order**: Validates the number of occurrences where an invoice was issued before the order was placed (this was surprinsingly non-zero before we arbitrarily fixed the invoice date of those instances).
-
----
-
-
-## Technologies Used
-
-- **Power BI**: Used to load, model, and visualize the data, providing interactive dashboards.
-- **Data Warehouse**: A centralized model to integrate fact and dimension tables for the analysis.
-- **DAX (Data Analysis Expressions)**: Used within BI to add calculated columns like segments, aggregations of columns and Shipping / Invoice durations, but also measures.
-
----
-
-
-## Dashboard Overview
-
-### Menu
-
-<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
-
-
-### Finance Dashboard
-
-<img src="images/finance.png" alt="Finance Dashboard" width="700"/>
-
-
-### Management Dashboard
-
-<img src="images/management.png" alt="Management Dashboard" width="700"/>
-
-
-### Marketing Dashboard
-
-<img src="images/marketing.png" alt="Marketing Dashboard" width="700"/>
 
 ---
 

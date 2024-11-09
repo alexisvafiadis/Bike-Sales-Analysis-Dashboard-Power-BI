@@ -2,11 +2,6 @@
 
 ## Dashboard Overview
 
-### Menu
-
-<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
-
-
 ### Finance Dashboard
 
 <img src="images/finance.png" alt="Finance Dashboard" width="700"/>
@@ -20,6 +15,10 @@
 ### Marketing Dashboard
 
 <img src="images/marketing.png" alt="Marketing Dashboard" width="700"/>
+
+### Menu
+
+<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
 
 ---
 

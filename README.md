@@ -1,5 +1,28 @@
 # Bike Store Sales Analysis Dashboard
 
+## Dashboard Overview
+
+### Menu
+
+<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
+
+
+### Finance Dashboard
+
+<img src="images/finance.png" alt="Finance Dashboard" width="700"/>
+
+
+### Management Dashboard
+
+<img src="images/management.png" alt="Management Dashboard" width="700"/>
+
+
+### Marketing Dashboard
+
+<img src="images/marketing.png" alt="Marketing Dashboard" width="700"/>
+
+---
+
 ## Project Overview
 
 This project demonstrates the use of **Business Intelligence (BI)** techniques to analyze the sales data of the San Martin Bike Store. The goal of the project is to provide insights to the executive board of the company for strategic decision-making using **Power BI**. The project includes data preparation, modeling, and dashboard creation to deliver key performance indicators (KPIs) and sales analysis across various dimensions like customers, products, stores, and sales agents.
@@ -97,30 +120,6 @@ The final step involved creating an interactive Power BI dashboard, incorporatin
 - **Power BI**: Used to load, model, and visualize the data, providing interactive dashboards.
 - **Data Warehouse**: A centralized model to integrate fact and dimension tables for the analysis.
 - **DAX (Data Analysis Expressions)**: Used within BI to add calculated columns like segments, aggregations of columns and Shipping / Invoice durations, but also measures.
-
----
-
-
-## Dashboard Overview
-
-### Menu
-
-<img src="images/menu.png" alt="Menu Dashboard" width="700"/>
-
-
-### Finance Dashboard
-
-<img src="images/finance.png" alt="Finance Dashboard" width="700"/>
-
-
-### Management Dashboard
-
-<img src="images/management.png" alt="Management Dashboard" width="700"/>
-
-
-### Marketing Dashboard
-
-<img src="images/marketing.png" alt="Marketing Dashboard" width="700"/>
 
 ---
 
